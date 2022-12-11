@@ -280,3 +280,18 @@ do
 done
 ```
 
+Para crear el pdf de este markdown correr el siguiente comando:
+
+```
+pandoc OSWA-exam-report-template_OS_v1.md \                        
+-o EnvironmentSensor.pdf \
+--from markdown+yaml_metadata_block+raw_html \
+--template eisvogel \
+--table-of-contents \
+--toc-depth 6 \
+--number-sections \
+--top-level-division=chapter \
+--highlight-style breezedark \
+--resource-path=.:src
+```
+
